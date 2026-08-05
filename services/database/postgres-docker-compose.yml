@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17.4
+    container_name: db_isales
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_MULTIPLE_DATABASES: isales_products, isales_orders, isales_customers
+    ports:
+      - "5555:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+

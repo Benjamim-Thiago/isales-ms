@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: invoicing
+  Kafka:
+    bootstrap-servers: 'http://localhost:29092'
+    consumer:
+      group-id: isales-invoicing
+      auto-offset-reset: earliest
+
+isales:
+    config:
+      kafka:
+        topics:
+          paid-order: 'isales.paid-order'
+
+server:
+  port: 8083
+
+minio:
+  endpoint: 'http://localhost:9000'
+  access-key: minioadmin
+  secret-key: minioadmin123
+  bucket-name: isales.invoicing
+

@@ -1,0 +1,11 @@
+package io.github.cursodsousa.isales.customers.model;
+
+import io.github.cursodsousa.isales.customers.model.enums.PaymentType;
+import lombok.Data;
+
+@Data
+public class PaymentInformation {
+    private String data;
+    private PaymentType paymentType;
+}
+
