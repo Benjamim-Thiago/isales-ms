@@ -20,3 +20,15 @@
 21:07:42.093 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.PaidOrderSubscribe - PaidOrderSubscribe received : {"id":5,"date":"2026-07-27","total":3502.40,"status":"PAGO","customerId":1,"customerName":"BENJA","customerCpf":"05157660383","addressCustomerStreet":"Rua Felismino Freitas","addressCustomerNumber":"123","addressCustomerArea":"Santa Maria","customerEmail":"benja@test.com","customerPhone":"+558698223472","items":[{"productId":1,"productName":"Pendrive 1TB","amount":1,"unitPrice":500.80,"total":500.80},{"productId":2,"productName":"HD 4TB","amount":2,"unitPrice":1500.80,"total":3001.60}]}
 21:07:44.224 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Generando nota fisacal para o pedido 5
 21:07:56.880 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Nota fisacal, nomedo arquivo: notafiscal_pedido_5.pdf
+21:58:48.597 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+21:58:48.602 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+22:07:15.471 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 256615 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+22:07:15.474 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+22:07:16.230 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+22:07:16.240 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:07:16.240 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+22:07:16.265 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 758 ms
+22:07:16.926 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+22:07:17.008 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 2.074 seconds (process running for 2.786)
+22:35:05.407 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+22:35:05.409 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
