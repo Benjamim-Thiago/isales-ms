@@ -6,10 +6,7 @@ public record OrderItemDetailRepresentation(
         Long productId,
         String productName,
         Integer amount,
-        BigDecimal unitPrice
+        BigDecimal unitPrice,
+            BigDecimal total
 ) {
-
-    public BigDecimal getTotal() {
-        return unitPrice.multiply(BigDecimal.valueOf(amount));
-    }
 }

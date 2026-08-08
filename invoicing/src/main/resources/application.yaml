@@ -2,7 +2,7 @@ spring:
   application:
     name: invoicing
   Kafka:
-    bootstrap-servers: 'http://localhost:29092'
+    bootstrap-servers: localhost:29092
     consumer:
       group-id: isales-invoicing
       auto-offset-reset: earliest
@@ -12,6 +12,7 @@ isales:
       kafka:
         topics:
           paid-order: 'isales.paid-order'
+          invoiced-order: 'isales.invoiced-order'
 
 server:
   port: 8083
@@ -21,4 +22,15 @@ minio:
   access-key: minioadmin
   secret-key: minioadmin123
   bucket-name: isales.invoicing
+
+logging:
+  file:
+    name: logs/invoicing.log
+  level:
+    root: INFO
+    org.apache.kafka: WARN
+    org.apache.kafka.clients.consumer.ConsumerConfig: ERROR
+    org.apache.kafka.clients.producer.ProducerConfig: ERROR
+    org.apache.kafka.common.utils.AppInfoParser: WARN
+    org.springframework.kafka: WARN
 

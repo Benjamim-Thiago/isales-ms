@@ -11,8 +11,8 @@ public record OrderDetailRepresentation(
         String customerName,
         String customerCpf,
         String addressCustomerStreet,
-        String  addressCustomerNumber,
-        String  addressCustomerArea,
+        String addressCustomerNumber,
+        String addressCustomerArea,
         String customerEmail,
         String customerPhone,
         List<OrderItemDetailRepresentation> items

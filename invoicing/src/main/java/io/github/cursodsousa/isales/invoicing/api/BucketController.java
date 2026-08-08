@@ -1,7 +1,7 @@
 package io.github.cursodsousa.isales.invoicing.api;
 
-import io.github.cursodsousa.isales.invoicing.bucket.BucketFile;
-import io.github.cursodsousa.isales.invoicing.bucket.BucketService;
+import io.github.cursodsousa.isales.invoicing.service.bucket.BucketFile;
+import io.github.cursodsousa.isales.invoicing.service.bucket.BucketService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

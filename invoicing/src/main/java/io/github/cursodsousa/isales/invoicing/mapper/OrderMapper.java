@@ -39,7 +39,8 @@ public class OrderMapper {
                 representation.productId(),
                 representation.productName(),
                 representation.amount(),
-                representation.unitPrice()
+                representation.unitPrice(),
+                representation.total()
         );
     }
 }

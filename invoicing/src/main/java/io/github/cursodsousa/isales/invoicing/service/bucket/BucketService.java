@@ -1,4 +1,4 @@
-package io.github.cursodsousa.isales.invoicing.bucket;
+package io.github.cursodsousa.isales.invoicing.service.bucket;
 
 import io.github.cursodsousa.isales.invoicing.config.props.MinioProps;
 import io.minio.GetPresignedObjectUrlArgs;
@@ -37,7 +37,7 @@ public class BucketService {
                     .method(Http.Method.GET)
                     .bucket(minioProps.getBucketName())
                     .object(fileName)
-                    .expiry(1, TimeUnit.HOURS)
+                    .expiry(7, TimeUnit.DAYS)
                     .build();
 
             return minioClient.getPresignedObjectUrl(object);

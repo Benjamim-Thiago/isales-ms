@@ -19,7 +19,7 @@ public class OrdersApplication {
 		return args -> kafkaTemplate.send(
 				topic, "data", "{ json }");
 	}
-	static void main(String[] args) {
+	public static void main(String[] args) {
 		SpringApplication.run(OrdersApplication.class, args);
 	}
 

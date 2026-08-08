@@ -1,4 +1,4 @@
-package io.github.cursodsousa.isales.invoicing.bucket;
+package io.github.cursodsousa.isales.invoicing.service.bucket;
 
 import org.springframework.http.MediaType;
 
