@@ -5,12 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.kafka.core.KafkaTemplate;
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-@EnableFeignClients
 public class OrdersApplication {
 	@Value("${isales.config.kafka.topics.paid-order}")
 	private String topic;

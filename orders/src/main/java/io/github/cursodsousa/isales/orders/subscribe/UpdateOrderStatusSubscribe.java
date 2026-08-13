@@ -1,6 +1,7 @@
 package io.github.cursodsousa.isales.orders.subscribe;
 
 import io.github.cursodsousa.isales.orders.service.UpdateOrderStatusService;
+import io.github.cursodsousa.isales.orders.subscribe.representation.UpdateOrderStatusRepresentation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -19,6 +20,18 @@ public class UpdateOrderStatusSubscribe {
             "${isales.config.kafka.topics.sent-order}"
     })
     public void receiveUpdate(String payload) {
-        log.info("Received update order status payload: {}", payload);
+        try{
+            log.info("Recebendo atualização de status: {}", payload);
+            var updateStatus = objectMapper.readValue(payload, UpdateOrderStatusRepresentation.class);
+            updateOrderStatusService.updateStatus(
+                    updateStatus.id(),
+                    updateStatus.status(),
+                    updateStatus.urlInvoiceFile(),
+                    updateStatus.trackingCode()
+            );
+            log.info("Pedido atualizado com sucesso!");
+        } catch (Exception e){
+            log.error("Erro ao atualizar status de pedido: {}", e.getMessage());
+        }
     }
 }

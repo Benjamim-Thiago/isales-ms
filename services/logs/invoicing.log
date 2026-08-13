@@ -1,34 +1,77 @@
-21:06:50.409 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 216497 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
-21:06:50.416 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
-21:06:51.206 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
-21:06:51.218 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-21:06:51.218 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-21:06:51.257 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 780 ms
-21:06:52.450 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
-21:06:52.563 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 2.804 seconds (process running for 3.425)
-21:06:52.587 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-isales-invoicing-1, groupId=isales-invoicing] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {isales.paid-order=LEADER_NOT_AVAILABLE}
-21:07:05.413 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-21:07:05.415 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-21:07:10.737 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 216867 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
-21:07:10.738 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
-21:07:11.706 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
-21:07:11.715 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-21:07:11.715 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-21:07:11.743 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 975 ms
-21:07:13.075 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
-21:07:13.205 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 3.084 seconds (process running for 4.559)
-21:07:42.093 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.PaidOrderSubscribe - PaidOrderSubscribe received : {"id":5,"date":"2026-07-27","total":3502.40,"status":"PAGO","customerId":1,"customerName":"BENJA","customerCpf":"05157660383","addressCustomerStreet":"Rua Felismino Freitas","addressCustomerNumber":"123","addressCustomerArea":"Santa Maria","customerEmail":"benja@test.com","customerPhone":"+558698223472","items":[{"productId":1,"productName":"Pendrive 1TB","amount":1,"unitPrice":500.80,"total":500.80},{"productId":2,"productName":"HD 4TB","amount":2,"unitPrice":1500.80,"total":3001.60}]}
-21:07:44.224 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Generando nota fisacal para o pedido 5
-21:07:56.880 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Nota fisacal, nomedo arquivo: notafiscal_pedido_5.pdf
-21:58:48.597 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-21:58:48.602 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-22:07:15.471 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 256615 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
-22:07:15.474 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
-22:07:16.230 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
-22:07:16.240 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-22:07:16.240 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-22:07:16.265 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 758 ms
-22:07:16.926 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
-22:07:17.008 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 2.074 seconds (process running for 2.786)
-22:35:05.407 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-22:35:05.409 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+15:58:30.377 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 42408 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+15:58:30.380 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+15:58:30.868 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+15:58:30.877 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:58:30.877 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+15:58:30.903 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 494 ms
+15:58:31.506 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+15:58:31.565 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.509 seconds (process running for 1.856)
+16:00:07.605 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:00:07.607 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:00:08.793 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 43954 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:00:08.796 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:00:09.275 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:00:09.283 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:00:09.283 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:00:09.305 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 480 ms
+16:00:09.844 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:00:09.900 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.409 seconds (process running for 1.704)
+16:09:33.450 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.PaidOrderSubscribe - PaidOrderSubscribe received : {"id":5,"date":"2026-07-27","total":3502.40,"status":"PAGO","trackingCode":null,"urlInvoiceFile":"http://localhost:9000/isales.invoicing/notafiscal_pedido_5.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20260811%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260811T020534Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=820fb790f8cb43320d52571eaa8ca010bf4b3ad440ad1828097d1af11ca13b61","customerId":1,"customerName":"BENJA","customerCpf":"05157660383","addressCustomerStreet":"Rua Felismino Freitas","addressCustomerNumber":"123","addressCustomerArea":"Santa Maria","customerEmail":"benja@test.com","customerPhone":"+558698223472","items":[{"productId":1,"productName":"Pendrive 1TB","amount":1,"unitPrice":500.80,"total":500.80},{"productId":2,"productName":"HD 4TB","amount":2,"unitPrice":1500.80,"total":3001.60}]}
+16:09:33.528 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Generando nota fisacal para o pedido 5
+16:09:34.852 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Nota fisacal, nomedo arquivo: notafiscal_pedido_5.pdf
+16:10:26.548 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:10:26.552 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:11:53.142 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 53748 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:11:53.144 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:11:53.686 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:11:53.694 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:11:53.695 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:11:53.720 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 545 ms
+16:11:54.486 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:11:54.555 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.806 seconds (process running for 2.493)
+16:14:15.553 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.a.k.c.c.internals.FetchCollector - [Consumer clientId=consumer-isales-invoicing-1, groupId=isales-invoicing] Received unknown topic or partition error in fetch for partition isales.paid-order-2
+16:14:15.559 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-isales-invoicing-1, groupId=isales-invoicing] The metadata response from the cluster reported a recoverable issue with correlation id 335 : {isales.paid-order=LEADER_NOT_AVAILABLE}
+16:14:15.672 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-isales-invoicing-1, groupId=isales-invoicing] The metadata response from the cluster reported a recoverable issue with correlation id 337 : {isales.paid-order=LEADER_NOT_AVAILABLE}
+16:14:29.942 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:14:29.944 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:14:31.543 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 55455 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:14:31.545 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:14:32.080 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:14:32.088 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:14:32.088 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:14:32.113 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 537 ms
+16:14:32.853 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:14:32.925 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.753 seconds (process running for 2.348)
+16:14:43.012 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:14:43.014 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:14:44.727 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 55996 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:14:44.729 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:14:45.259 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:14:45.267 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:14:45.267 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:14:45.291 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 531 ms
+16:14:45.984 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:14:46.055 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.693 seconds (process running for 2.302)
+16:14:52.650 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:14:52.653 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:15:01.282 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 56586 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:15:01.284 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:15:01.826 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:15:01.834 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:15:01.834 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:15:01.859 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 544 ms
+16:15:02.535 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:15:02.613 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.765 seconds (process running for 2.393)
+16:18:02.296 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.PaidOrderSubscribe - PaidOrderSubscribe received : {"id":6,"date":"2026-08-13","total":3502.40,"status":"PAGO","trackingCode":null,"urlInvoiceFile":null,"customerId":1,"customerName":"BENJA","customerCpf":"05157660383","addressCustomerStreet":"Rua Felismino Freitas","addressCustomerNumber":"123","addressCustomerArea":"Santa Maria","customerEmail":"benja@test.com","customerPhone":"+558698223472","items":[{"productId":1,"productName":"Pendrive 1TB","amount":1,"unitPrice":500.80,"total":500.80},{"productId":2,"productName":"HD 4TB","amount":2,"unitPrice":1500.80,"total":3001.60}]}
+16:18:05.034 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Generando nota fisacal para o pedido 6
+16:18:15.876 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  i.g.c.i.i.s.InvoiceGeneratorService - Nota fisacal, nomedo arquivo: notafiscal_pedido_6.pdf
+16:29:39.824 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+16:29:39.828 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+16:30:28.376 [main] INFO  i.g.c.i.i.InvoicingApplication - Starting InvoicingApplication using Java 25.0.2 with PID 67977 (/home/benjamim/projects/studies/java/ms/invoicing/target/classes started by benjamim in /home/benjamim/projects/studies/java/ms/services)
+16:30:28.378 [main] INFO  i.g.c.i.i.InvoicingApplication - No active profile set, falling back to 1 default profile: "default"
+16:30:28.888 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+16:30:28.896 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:30:28.896 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+16:30:28.922 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 517 ms
+16:30:29.519 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+16:30:29.584 [main] INFO  i.g.c.i.i.InvoicingApplication - Started InvoicingApplication in 1.636 seconds (process running for 2.099)

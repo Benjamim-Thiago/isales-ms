@@ -13,6 +13,8 @@ public interface OrderDetailMapper {
     @Mapping(source = "total", target = "total")
     @Mapping(source = "status", target = "status")
     @Mapping(source = "customerId", target = "customerId")
+    @Mapping(source = "urlNF", target = "urlInvoiceFile")
+    @Mapping(source = "trackingCode", target = "trackingCode")
     // A partir daqui é obrigatorio pois são fields de nomes diferentes
     @Mapping(source = "customerRepresentation.name", target = "customerName")
     @Mapping(source = "customerRepresentation.document", target = "customerCpf")

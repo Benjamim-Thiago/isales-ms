@@ -25,7 +25,7 @@ public class InvoicingPublisher {
         try {
             var representation =  new UpdateOrderStatus(order.id(), OrderStatus.FATURADO, urlInvoice);
             String json = objectMapper.writeValueAsString(representation);
-            kafkaTemplate.send(topic, "Order ID " + order.id(), json);
+            kafkaTemplate.send(topic, "Pedido ID:  " + order.id(), json);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
