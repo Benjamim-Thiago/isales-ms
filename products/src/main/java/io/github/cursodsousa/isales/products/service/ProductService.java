@@ -13,10 +13,16 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public Product save(Product product) {
+        product.setActive(true);
         return productRepository.save(product);
     }
 
     public Optional<Product> findById(Long id) {
         return productRepository.findById(id);
+    }
+
+    public void delete(Product product) {
+        product.setActive(false);
+        productRepository.save(product);
     }
 }

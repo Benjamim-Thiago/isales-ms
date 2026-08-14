@@ -18,4 +18,7 @@ public class Product {
 
     @Column(name = "unit_price", nullable = false, precision = 16, scale = 2)
     private BigDecimal unitPrice;
+
+    @Column(name = "active")
+    private Boolean active;
 }

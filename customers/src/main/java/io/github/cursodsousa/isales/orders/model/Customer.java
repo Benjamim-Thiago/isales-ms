@@ -31,4 +31,7 @@ public class Customer {
 
     @Column(name = "phone", nullable = false, length = 20)
     private String phone;
+
+    @Column(name = "active")
+    private Boolean active;
 }

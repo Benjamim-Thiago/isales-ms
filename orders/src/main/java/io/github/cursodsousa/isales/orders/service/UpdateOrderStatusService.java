@@ -15,9 +15,8 @@ public class UpdateOrderStatusService {
     public void updateStatus(Long id, OrderStatus orderStatus, String urlInvoiceFile, String trackingCode) {
         orderRepository.findById(id).ifPresent(order -> {
             order.setStatus(orderStatus);
-            order.setTrackingCode(trackingCode);
-            order.setUrlNF(urlInvoiceFile);
-            order.setTrackingCode(trackingCode);
+            if (urlInvoiceFile != null) order.setUrlNF(urlInvoiceFile);
+            if (trackingCode != null) order.setTrackingCode(trackingCode);
         });
     }
 }

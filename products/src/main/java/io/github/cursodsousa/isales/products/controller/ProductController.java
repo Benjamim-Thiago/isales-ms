@@ -3,8 +3,10 @@ package io.github.cursodsousa.isales.products.controller;
 import io.github.cursodsousa.isales.products.model.Product;
 import io.github.cursodsousa.isales.products.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("products")
@@ -21,5 +23,16 @@ public class ProductController {
         return productService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
+    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
+        var product = productService.findById(id).orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "Product not found"
+        ));
+
+        productService.delete(product);
+
+        return ResponseEntity.ok().build();
     }
 }

@@ -30,6 +30,10 @@ public class OrderValidator {
             var response =  customersClient.getCustomerById(id);
             CustomerRepresentation customer = response.getBody();
             log.debug("Cliente de codigo {} e nome {} encontrado", customer.id(), customer.name());
+
+            if(!customer.active()) {
+                throw new ValidatorException("customerId", "Customer id "+ customer.id() +" is inactive");
+            }
         } catch (FeignException.NotFound e) {
             log.error("Cliente de codigo {} nao encontrado", id);
             throw new ValidatorException("customerId", String.format("Cliente de código %d não encontrado", id));
@@ -41,6 +45,10 @@ public class OrderValidator {
             var response =  productsClient.getProductById(item.getProductId());
             ProductRepresentation product = response.getBody();
             log.debug("Produto de codigo {} e nome {} encontrado", product.id(), product.name());
+
+            if(!product.active()) {
+                throw new ValidatorException("productId", "Product id "+ product.id() +" is inactive");
+            }
         } catch (FeignException.NotFound e) {
             log.error("Produto de codigo {} nao encontrado", item.getProductId());
             throw new ValidatorException(

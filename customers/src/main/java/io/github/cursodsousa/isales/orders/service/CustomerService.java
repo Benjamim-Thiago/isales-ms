@@ -13,6 +13,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
 
     public Customer save(Customer customer) {
+        customer.setActive(true);
         return customerRepository.save(customer);
     }
 

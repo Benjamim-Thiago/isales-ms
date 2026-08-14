@@ -8,6 +8,7 @@ public record CustomerRepresentation(
         String number,
         String area,
         String email,
-        String phone
+        String phone,
+        Boolean active
 ) {
 }
